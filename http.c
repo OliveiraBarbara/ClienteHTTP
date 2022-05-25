@@ -68,7 +68,7 @@ void escreve_arquivo(char *buffer, int sockfd){
 	
 	arq = fopen("http.html", "w");
 	if (arq == NULL){
-		fprintf (stderr, "Nao foi possivel abrir o arquivo\n", arq);
+		fprintf(stderr, "Nao foi possivel abrir o arquivo\n");
 	}else{
 		while(recv(sockfd, buffer, SIZE, 0) > 0){
 			fprintf(arq, "%s", buffer);
